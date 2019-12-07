@@ -5,8 +5,9 @@ import Header from "../../src/components/Header.vue";
 
 describe('Header', () => {
     // Now mount the component and you have the wrapper
-    const wrapper = mount(Header)
     let today = new Date();
+    const wrapper = mount(Header)
+
     // Check that this component properly displays today's date
 
     it('renders the correct date', () => {
