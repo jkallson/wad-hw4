@@ -4,12 +4,13 @@
             <input type="text" v-model="title" placeholder="Please enter a title..." autofocus @keyup.enter="addItem">
         </div>
         <div v-else>
-            <span @click="open = true">+</span>
+            <span class="plusButton" @click="open = true">+</span>
         </div>
     </div>
 </template>
 
 <script>
+
     export default {
         name: "Footer",
         data: () => {
@@ -23,7 +24,7 @@
                 this.$props.add(this.title);
                 this.title = "";
                 this.open = false
-            }
+            },
         },
         props: {
             add: Function
